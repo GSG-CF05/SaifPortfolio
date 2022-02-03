@@ -23,6 +23,28 @@ a{
     text-decoration: none;
 }
 
+/* effects */
+.left-to-right-effect{
+    position: relative;
+}
+.left-to-right-effect::after{
+    content: "";
+    background-color: var(--mainColor);
+    width: 0%;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    z-index: -1;
+    transition: width 1s;
+    
+}
+.left-to-right-effect:hover::after{
+    width: 100%;
+}
+
+
 /* start header styles  */
 header{
     background-color: var(--mainColor);
@@ -84,4 +106,25 @@ header .container nav .nav-list li a{
         text-align: center;      
     }
 
+}
+
+
+/* start about me section  */
+.about-me .container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px 30px;
+    border: solid 1px var(--secondColor);
+    font-size: 1.2rem;
+    color: var(--secondColor);
+}
+.about-me .container h3{
+    color: var(--mainColor);
+}
+
+.about-me .container:hover h3{
+   color: white;
+}
+.about-me .container i{
+    color: var(--secondColor);
 }
